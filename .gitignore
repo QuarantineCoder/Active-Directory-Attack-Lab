@@ -1,1 +1,22 @@
 active-directory-ai-lab.md
+
+# Terraform — state files contain secrets in plaintext, never commit
+**/.terraform/*
+*.tfstate
+*.tfstate.*
+crash.log
+crash.*.log
+
+# Variable files may hold real subscription/tenant IDs — commit only *.example
+*.tfvars
+*.tfvars.json
+!*.tfvars.example
+
+# Terraform CLI config / plan output
+.terraformrc
+terraform.rc
+*.tfplan
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
