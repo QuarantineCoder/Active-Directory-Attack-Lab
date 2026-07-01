@@ -1,5 +1,9 @@
 active-directory-ai-lab.md
 
+# Claude Code local config, agent definitions, and project guidance (local-only)
+.claude/
+CLAUDE.md
+
 # Terraform — state files contain secrets in plaintext, never commit
 **/.terraform/*
 *.tfstate
