@@ -6,8 +6,9 @@ resource "azurerm_log_analytics_workspace" "phix" {
   resource_group_name = azurerm_resource_group.phix.name
   location            = azurerm_resource_group.phix.location
 
-  sku               = "PerGB2018" # pay-per-GB tier
-  retention_in_days = 30          # free-tier default
+  sku                 = "PerGB2018" # pay-per-GB tier
+  retention_in_days   = 30          # free-tier default
+  daily_quota_gb      = 1
 }
 
 resource "azurerm_sentinel_log_analytics_workspace_onboarding" "phix" {
