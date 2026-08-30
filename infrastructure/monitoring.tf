@@ -2,6 +2,7 @@ resource "azurerm_monitor_data_collection_rule" "security_events" {
   name                = "dcr-phix-security-events"
   resource_group_name = azurerm_resource_group.phix.name
   location            = azurerm_resource_group.phix.location
+  kind                = "Windows"
 
   destinations {
     log_analytics {
